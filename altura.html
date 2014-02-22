@@ -14,8 +14,7 @@
             }
 
             header {
-                height: 80px;
-                padding: 20px 0;
+                height: 60px;
                 position: absolute;
                 top: 0;
                 background-color: #fff;
@@ -24,18 +23,26 @@
             }
 
             #huge {
-                /*min-height: 200px;*/
-                background-color: navy;
+                background: #346363 url("http://upload.wikimedia.org/wikipedia/commons/1/15/Hopwas_Woods_Sun.jpg") no-repeat right top;
+                background-size: cover;
+                padding: 20px;
                 color: #fff;
+            }
+            .huge-inner {
+                margin-top: 120px;
+            }
+            .huge-inner h1 {
+                text-align: center;
             }
         </style>
     </head>
     <body>
         <header>
-            <p>Header</p>
         </header>
         <div id="huge">
-            <!-- <h1>So Responsive!</h1> -->
+            <div class="huge-inner">
+                <h1>So Responsive!</h1>
+            </div>
         </div>
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -49,7 +56,7 @@
                     if(windowHeight > 400){
                         $huge.height(windowHeight);
                     } else {
-                        $huge.height(360);
+                        $huge.height(300);
                     };
                 };
 

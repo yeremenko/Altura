@@ -10,7 +10,7 @@
             body {
                 margin: 0;
                 padding: 0;
-                height: 800px;
+                height: 1200px;
             }
 
             header {
@@ -20,29 +20,44 @@
                 background-color: #fff;
                 opacity: .75;
                 width: 100%;
+                z-index: 9999;
             }
 
             #huge {
-                background: #346363 url("http://upload.wikimedia.org/wikipedia/commons/1/15/Hopwas_Woods_Sun.jpg") no-repeat right top;
-                background-size: cover;
-                padding: 20px;
                 color: #fff;
+                overflow: hidden;
+                z-index: -1;
+                background-size: cover;
             }
-            .huge-inner {
-                margin-top: 120px;
-            }
-            .huge-inner h1 {
-                text-align: center;
+
+            #huge video {
+                min-width: 100%;
+                padding: 0;
             }
         </style>
     </head>
     <body>
         <header>
         </header>
+
         <div id="huge">
-            <div class="huge-inner">
-                <h1>So Responsive!</h1>
-            </div>
+            <video  loop 
+                    muted 
+                    preload="auto"  
+                    autoplay="true" 
+                    poster="null" 
+                    id="huge-video">
+                    <source src="http://barrelny.com/recap/2012/wp-content/themes/barrel-portfolio/im/bike_small.mp4" type="video/mp4" />
+                    <source src="http://barrelny.com/recap/2012/wp-content/themes/barrel-portfolio/im/book.ogv" type="video/ogg" />
+                    <source src="http://barrelny.com/recap/2012/wp-content/themes/barrel-portfolio/im/book.webm" type="video/webm" />
+
+                    <!-- 
+                    <object width="320" height="240">
+                    <param name="movie" value="myvideo.swf" />
+                    <embed src="myvideo.swf" width="320" height="240"></embed>
+                    </object>
+                    -->
+            </video>
         </div>
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -53,10 +68,10 @@
                     var $huge        = $("#huge"); 
                     var windowHeight = $(window).height();//get window height
 
-                    if(windowHeight > 400){
-                        $huge.height(windowHeight - 40);
+                    if(windowHeight >= 250){
+                        $huge.height(windowHeight);
                     } else {
-                        $huge.height(300);
+                        $huge.height(250);
                     };
                 };
 

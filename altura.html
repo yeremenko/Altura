@@ -24,6 +24,7 @@
             }
 
             #huge {
+                position: relative;
                 color: #fff;
                 overflow: hidden;
                 z-index: -1;
@@ -34,6 +35,16 @@
                 min-width: 100%;
                 min-height: 100%;
                 padding: 0;
+            }
+            #huge #main-search-wrapper {
+                position: absolute;
+                top: 20%;
+                left: 50%;
+                margin-left: -250px;
+                width: 500px;
+                height: 300px;
+                display: block;
+                z-index: 999999;
             }
         </style>
     </head>
@@ -48,9 +59,13 @@
                     autoplay="true" 
                     poster="null" 
                     id="huge-video">
+                    <!--                     
                     <source src="http://barrelny.com/recap/2012/wp-content/themes/barrel-portfolio/im/bike_small.mp4" type="video/mp4" />
                     <source src="http://barrelny.com/recap/2012/wp-content/themes/barrel-portfolio/im/book.ogv" type="video/ogg" />
                     <source src="http://barrelny.com/recap/2012/wp-content/themes/barrel-portfolio/im/book.webm" type="video/webm" />
+                    -->
+                    <source src="http://manaron.s3.amazonaws.com/srg/stuff/Text3_productdisplay_v1_1.mov" />
+                    
 
                     <!-- 
                     <object width="320" height="240">
@@ -59,6 +74,13 @@
                     </object>
                     -->
             </video>
+            <div id="main-search-wrapper">
+                <form>
+                    <label for="name">First Name</label>
+                    <input type="text" name="name" placeholder="First Name">
+                    <input type="submit" value="submit">
+                </form>
+            </div>
         </div>
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>

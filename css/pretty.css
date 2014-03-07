@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 1200px;
+    position: relative;
+}
+
+header {
+    height: 60px;
+    position: absolute;
+    top: 0;
+    background-color: #fff;
+    opacity: .75;
+    width: 100%;
+    z-index: 9999;
+}
+
+#huge {
+    position: relative;
+    color: #fff;
+    overflow: hidden;
+    z-index: -1;
+    background-size: cover;
+}
+
+#huge video {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    padding: 0;
+    z-index: 1;
+}
+#main-search-wrapper {
+    position:absolute;
+    z-index:999;
+    display:block;
+    top:20%;
+}

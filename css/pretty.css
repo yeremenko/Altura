@@ -31,8 +31,7 @@ header {
     z-index: 1;
 }
 #main-search-wrapper {
-    position:absolute;
+    position:relative;
     z-index:999;
-    display:block;
-    top:20%;
+    bottom:25%;
 }

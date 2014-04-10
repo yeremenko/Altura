@@ -3,11 +3,11 @@ $(document).ready(function() {
     var $huge        = $("#huge"),
         windowHeight = $(window).height();
 
-    if(windowHeight >=400){
+    if(windowHeight > 600){
       $huge.height(windowHeight);
     } else {
     
-    $huge.height(400);
+    $huge.height(600);
     };
   };
 

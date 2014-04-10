@@ -11,43 +11,46 @@
     </head>
     <body>
         <header>
+            <div class="container">
+                <div id="logo" class="pull-left"></div>
+                <a href="#" id="login-btn" class="pull-right">Login</a>
+            </div>
         </header>
-        <div id="huge">
-            <video  loop
-                    muted
-                    preload="auto"
-                    autoplay="true"
-                    id="huge-video">
 
-                    <source src="//barrelny.com/recap/2012/wp-content/themes/barrel-portfolio/im/bike_small.mp4" type="video/mp4" />
-                    <source src="//barrelny.com/recap/2012/wp-content/themes/barrel-portfolio/im/book.ogv" type="video/ogg" />
-                    <source src="//barrelny.com/recap/2012/wp-content/themes/barrel-portfolio/im/book.webm" type="video/webm" />
-                    <source src="//manaron.s3.amazonaws.com/srg/stuff/Text3_productdisplay_v1_1.mov" type="video/mov"/>
-                    
-                    <object width="320" height="240">
-                        <param name="movie" value="myvideo.swf" />
-                        <embed src="myvideo.swf" width="320" height="240"></embed>
-                    </object>
-                   
+        <div id="huge" class="hidden-xs">
+            <video id="video_background" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0"> 
+                <source src="img/baby.webm" type="video/webm"> 
+                <source src="img/baby.mp4" type="video/mp4"> 
+
             </video>
-        </div>
-        <div id="main-search-wrapper" class="container">
-            <form class="form-horizontal" role="form">
-                <div class="col-xs-12 col-sm-4">
-                    <input type="text" class="form-control" placeholder="First Name">
-                </div>
-                <div class="col-xs-12 col-sm-4">
-                    <input type="text" class="form-control" placeholder="Last Name">
-                </div>
-                <div class="col-xs-12 col-sm-2">
-                    <input type="text" class="form-control" placeholder="State">
-                </div>
-                <div class="col-xs-12 col-sm-2">
-                    <button type="submit" class="btn btn-block btn-success">Search</button>
-                </div>
-            </form>
+            
         </div>
 
+        <div id="main-search-wrapper">
+            <div class="container">
+                <h1 class="text-center">Public Records</h1>
+                <p class="sub-header text-center">Criminal Records, Bankruptcies, Contact Information, and More!</p>
+                <form id="main-search" class="form-horizontal" role="form">
+                    <div class="col-xs-12 col-sm-4">
+                        <label>First Name</label>
+                        <input type="text" class="form-control" placeholder="John">
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <label>Last Name</label>
+                        <input type="text" class="form-control" placeholder="Doe">
+                    </div>
+                    <div class="col-xs-12 col-sm-2">
+                        <label>State</label>
+                        <select class="form-control">
+                            <option value="All">All States</option>
+                        </select>
+                    </div>
+                    <div class="col-xs-12 col-sm-2">
+                        <button type="submit" class="btn btn-block btn-success">Search</button>
+                    </div>
+                </form>
+            </div>
+        </div>    
 
         <script type="text/javascript" src="js/jquery.min.js"></script>
         <script type="text/javascript" src="js/worker.js">
